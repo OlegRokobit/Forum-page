@@ -258,6 +258,11 @@
   </div> -->
   <div style="width: 100%; background: #F5F9FA;">
 		<div class="forum-container"> 
+      <div class="burger-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+          <path d="M0 17.3048H24V14.4207H0V17.3048ZM0 10.0945H24V7.21034H0V10.0945ZM0 0V2.88413H24V0H0Z" fill="#0F0F0F"/>
+        </svg>
+      </div>
       <div class="user-menu">
         <a href="user-menu-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -326,6 +331,16 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.808 2.53062L0.801074 14.9977L2.86863 12.9302H14.4C14.8382 12.9302 15.2 12.5683 15.2 12.1302V2.53018C15.2 2.092 14.8382 1.73018 14.4 1.73018H1.6C1.16704 1.73018 0.808 2.08722 0.808 2.53062ZM0 16.9302L0.00799999 2.53018C0.00799999 1.65018 0.72 0.930176 1.6 0.930176H14.4C15.28 0.930176 16 1.65018 16 2.53018V12.1302C16 13.0102 15.28 13.7302 14.4 13.7302H3.2L0 16.9302Z" fill="#030303"/>
         </svg>
        Chat
+      </a>
+      </div>
+      <div class="profile-item">
+        <a href="user-menu-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+            <path d="M8.58876 9.13866C8.57388 9.13866 8.55156 9.13866 8.53667 9.13866C8.51435 9.13866 8.48458 9.13866 8.46225 9.13866C6.77293 9.08657 5.50781 7.76936 5.50781 6.14702C5.50781 4.49493 6.85479 3.14795 8.5069 3.14795C10.159 3.14795 11.506 4.49493 11.506 6.14702C11.4985 7.7768 10.226 9.08657 8.61109 9.13866C8.59621 9.13866 8.59621 9.13866 8.58876 9.13866ZM8.49946 4.25679C7.4576 4.25679 6.61665 5.10516 6.61665 6.13958C6.61665 7.15913 7.41295 7.98517 8.42504 8.02238C8.44737 8.01494 8.52179 8.01494 8.59621 8.02238C9.59342 7.97029 10.3748 7.15169 10.3823 6.13958C10.3823 5.10516 9.54132 4.25679 8.49946 4.25679Z" fill="#030303"/>
+            <path d="M8.50196 16.0003C6.50011 16.0003 4.58755 15.2561 3.10662 13.9017C2.97267 13.7826 2.91313 13.604 2.92801 13.4328C3.02476 12.5473 3.57546 11.7212 4.4908 11.111C6.70848 9.63749 10.3029 9.63749 12.5131 11.111C13.4285 11.7286 13.9792 12.5473 14.0759 13.4328C14.0982 13.6114 14.0313 13.7826 13.8973 13.9017C12.4164 15.2561 10.5038 16.0003 8.50196 16.0003ZM4.09639 13.284C5.33173 14.3184 6.88708 14.884 8.50196 14.884C10.1168 14.884 11.6722 14.3184 12.9075 13.284C12.7736 12.83 12.4164 12.391 11.888 12.0338C10.0573 10.8133 6.95406 10.8133 5.10848 12.0338C4.58011 12.391 4.23034 12.83 4.09639 13.284Z" fill="#030303"/>
+            <path d="M8.5 16C4.08698 16 0.5 12.413 0.5 8C0.5 3.58698 4.08698 0 8.5 0C12.913 0 16.5 3.58698 16.5 8C16.5 12.413 12.913 16 8.5 16ZM8.5 1.11628C4.70465 1.11628 1.61628 4.20465 1.61628 8C1.61628 11.7953 4.70465 14.8837 8.5 14.8837C12.2953 14.8837 15.3837 11.7953 15.3837 8C15.3837 4.20465 12.2953 1.11628 8.5 1.11628Z" fill="#030303"/>
+          </svg>
+        My Profile
       </a>
       </div>
 			<div class="subforum">
@@ -1019,7 +1034,7 @@
 							</div>
 						</div>
 					</div>
-          <div class="pagination">
+          <div class="pagination bottom">
             <div class="number">
                 <svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none">
                 <path d="M5.49979 0.5H8.49979L3.49979 5.5L8.49979 10.5H5.49979L0.5 5.5L5.49979 0.5Z" fill="#2062B3"/>
@@ -1097,14 +1112,24 @@
       flex-direction: column;
       gap: 20px;
     }
-    .user-menu a{
+    .profile-item{
+      position: absolute;
+      left: -60px;
+      bottom:310px;
+    }
+    .burger-item{
+      position: absolute;
+      left: -47px;
+      top: -75px;
+    }
+    .user-menu a, .profile-item a{
       color:#030303;
       font-size: 10px;
       font-weight: 300;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 47px;
+      max-width: 48px;
       text-align: center;
       gap: 2px;
     }
@@ -1336,6 +1361,9 @@
       justify-content: flex-end;
       gap: 5px;
       /* padding-right: 14px; */
+    }
+    .pagination.bottom{
+      padding-right: 14px;
     }
     .pagination_dots{
       display: flex;
@@ -1822,7 +1850,8 @@
      .table-container{
       background: white;
       padding-bottom: 14px;
-          border-radius: 10px;
+      border-radius: 10px;
+      margin-bottom: 30px; 
      }
       .scroll-btn{
           position: fixed;
